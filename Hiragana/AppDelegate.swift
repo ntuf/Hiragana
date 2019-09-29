@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Hiragana
 //
-//  Created by hiroyuki tomiduka on 2019/09/30.
+//  Created by hiroyuki tomiduka on 2019/09/27.
 //  Copyright © 2019 ntuf. All rights reserved.
 //
 

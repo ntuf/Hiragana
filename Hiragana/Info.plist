@@ -60,5 +60,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>AppConfig</key>
+	<dict>
+		<key>Goo Labs API hiragana URL</key>
+		<string>$(GOO_LABS_API_HIRAGANA_URL)</string>
+		<key>Goo Labs API app_id</key>
+		<string>$(GOO_LABS_API_APP_ID)</string>
+	</dict>
 </dict>
 </plist>
