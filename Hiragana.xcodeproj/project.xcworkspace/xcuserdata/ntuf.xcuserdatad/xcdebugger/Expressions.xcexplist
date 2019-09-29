@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "Configuration.init():Configuration.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "config[&quot;Goo Labs API hiragana URL&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "config">
+            </PersistentString>
+            <PersistentString
+               value = "goolabsAPI_app_id">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "KanaConverter.getKana(_:completion:):KanaConverter.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "String(Configuration.shared.goolabsAPI_hiragana_URL)">
+            </PersistentString>
+            <PersistentString
+               value = "app_id">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
