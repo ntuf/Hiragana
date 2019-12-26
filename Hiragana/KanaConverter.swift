@@ -19,28 +19,30 @@ class KanaConverter{
    
     func getKana(_ sentence: String, completion: @escaping (String)->Void){
         
-       let request = NSMutableURLRequest(url: URL(string: urlString)!)
-       request.httpMethod = "POST"
-       request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        var request = URLRequest(url: URL(string: urlString)!)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
-       let params:[String:Any] = [
-           "app_id": app_id,
-           "sentence": sentence,
-           "output_type": "hiragana"
-       ]
+        let params:[String:Any] = [
+            "app_id": app_id,
+            "sentence": sentence,
+            "output_type": "hiragana"
+        ]
 
        do{
            request.httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
 
            let task:URLSessionDataTask = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: {(data,response,error) -> Void in
-                           
+                if let UnwrappedData = data {
                 let decoder: JSONDecoder = JSONDecoder()
                 do {
-                    let data: JsonData = try decoder.decode(JsonData.self, from: data!)
-                    completion(data.converted)
-                } catch {
-                    print("error:", error)
-                    completion("")
+                        let data: JsonData = try    decoder.decode(JsonData.self,
+                            from: UnwrappedData )
+                        completion(data.converted)
+                    } catch {
+                        print("error:", error)
+                        completion("")
+                    }
                 }
            })
            task.resume()
